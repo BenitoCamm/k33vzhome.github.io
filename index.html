@@ -185,53 +185,6 @@
   .social-links-bottom img:hover {
     transform: scale(1.1);
   }
-  .chat-container {
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 10px;
-  }
-  .chat-messages {
-    height: 300px;
-    overflow-y: auto;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  .chat-input {
-    display: flex;
-    gap: 1rem;
-  }
-  .chat-input input {
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(255,255,255,0.2);
-    color: #ffffff;
-  }
-  .chat-input button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #4b367c;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .chat-input button:hover {
-    background-color: #3a2b61;
-  }
-  .chat-message {
-    margin-bottom: 0.5rem;
-  }
-  .chat-message .username {
-    font-weight: bold;
-    color: #b19dd8;
-  }
 </style>
 <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
@@ -331,18 +284,6 @@
     </a>
   </div>
 
-  <div class="chat-container">
-    <h2>Chat de la comunidad</h2>
-    <div class="chat-messages" id="chatMessages">
-      <!-- Los mensajes se agregarán aquí dinámicamente -->
-    </div>
-    <div class="chat-input">
-      <input type="text" id="chatName" placeholder="Tu nombre" style="width: 150px;">
-      <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
-      <button onclick="sendMessage()">Enviar</button>
-    </div>
-  </div>
-
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const header = document.querySelector('header');
@@ -385,36 +326,6 @@
     function openCommunity() {
       window.open("https://www.youtube.com/@k33vz_/community", "_blank");
     }
-
-    // Chat functionality
-    function sendMessage() {
-      const chatName = document.getElementById('chatName');
-      const chatInput = document.getElementById('chatInput');
-      const name = chatName.value.trim();
-      const message = chatInput.value.trim();
-      if (name && message) {
-        addMessage(name, message);
-        chatInput.value = '';
-      } else {
-        alert("Por favor, ingresa tu nombre y un mensaje.");
-      }
-    }
-
-    function addMessage(username, message) {
-      const chatMessages = document.getElementById('chatMessages');
-      const messageElement = document.createElement('div');
-      messageElement.classList.add('chat-message');
-      messageElement.innerHTML = `<span class="username">${username}:</span> ${message}`;
-      chatMessages.appendChild(messageElement);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    // Agregar evento de tecla "Enter" para enviar mensajes
-    document.getElementById('chatInput').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        sendMessage();
-      }
-    });
   </script>
 
 </body></html>
