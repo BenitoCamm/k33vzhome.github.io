@@ -1,5 +1,5 @@
 
-<!DOCTYPE html><html><head><base href="https://media.discordapp.net/attachments/1116092669563777084/1250589631796219914/GP0TDLmX0AAFUme.png?ex=66ce5e5b&amp;is=66cd0cdb&amp;hm=6a1201de1e19aa203c50975621ea70ac831564e74aadd5313548216c98178b7f&amp;=&amp;format=webp&amp;quality=lossless&amp;width=468&amp;height=468">
+<html><head><base href="https://twitch.tv/k33vz_/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>K33vzHome</title>
@@ -185,12 +185,52 @@
   .social-links-bottom img:hover {
     transform: scale(1.1);
   }
-  .meme-image {
-    max-width: 100%;
-    height: auto;
+  .chat-container {
+    width: 100%;
+    max-width: 1200px;
     margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .chat-input {
+    display: flex;
+    gap: 1rem;
+  }
+  .chat-input input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.2);
+    color: #ffffff;
+  }
+  .chat-input button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4b367c;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .chat-input button:hover {
+    background-color: #3a2b61;
+  }
+  .chat-message {
+    margin-bottom: 0.5rem;
+  }
+  .chat-message .username {
+    font-weight: bold;
+    color: #b19dd8;
   }
 </style>
 <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
@@ -212,7 +252,7 @@
       <h2>¡Bienvenido a NegroLand!</h2>
       
       <div class="video-embed">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ifxjmdydTeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ifxjmdydTeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       
       <div class="info-section">
@@ -250,26 +290,25 @@
       <h2>Videos Destacados</h2>
       <div class="video-grid">
         <div class="video-item">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/9_ephnwgyfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/9_ephnwgyfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <h3>Video 1</h3>
         </div>
         <div class="video-item">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/XeTOKWItKtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/XeTOKWItKtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <h3>Video 2</h3>
         </div>
         <div class="video-item">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/6S4okfw6wzM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/6S4okfw6wzM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <h3>Video 3</h3>
         </div>
       </div>
-      <p>Aca unos videos Gmod para que vean</p>
-      <img src="https://media.discordapp.net/attachments/1116092669563777084/1250589631796219914/GP0TDLmX0AAFUme.png?ex=66ce5e5b&amp;is=66cd0cdb&amp;hm=6a1201de1e19aa203c50975621ea70ac831564e74aadd5313548216c98178b7f&amp;=&amp;format=webp&amp;quality=lossless&amp;width=468&amp;height=468" alt="Meme de K33vz_" class="meme-image">
+      <p>Aquí encontrarás una selección de los mejores momentos y streams de K33vz_. ¡No te pierdas ninguno!</p>
     </div>
   </div>
 
   <div id="retosModal" class="modal">
     <div class="modal-content">
-      <span class="close">×</span>
+      <span class="close">&times;</span>
       <h2>Retos y Eventos Especiales</h2>
       <p>K33vz_ organiza regularmente retos y eventos especiales para mantener a la comunidad emocionada y comprometida. Aquí tienes algunos ejemplos:</p>
       <ul>
@@ -290,9 +329,18 @@
     <a href="https://www.youtube.com/channel/UCJ4ZAmJJlM8lF1WYYdeO5_g" target="_blank">
       <img src="https://www.youtube.com/s/desktop/3737dbf3/img/favicon_144x144.png" alt="YouTube Logo" width="60" height="60">
     </a>
-    <a href="https://www.tiktok.com/@k33vzx" target="_blank">
-      <img src="https://sf16-scmcdn-va.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/logo-blue-1897aafd10d502546bb92b5a04a4d5a2.svg" alt="TikTok Logo" width="60" height="60">
-    </a>
+  </div>
+
+  <div class="chat-container">
+    <h2>Chat de la comunidad</h2>
+    <div class="chat-messages" id="chatMessages">
+      <!-- Los mensajes se agregarán aquí dinámicamente -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatName" placeholder="Tu nombre" style="width: 150px;">
+      <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
   </div>
 
   <script>
@@ -337,6 +385,36 @@
     function openCommunity() {
       window.open("https://www.youtube.com/@k33vz_/community", "_blank");
     }
+
+    // Chat functionality
+    function sendMessage() {
+      const chatName = document.getElementById('chatName');
+      const chatInput = document.getElementById('chatInput');
+      const name = chatName.value.trim();
+      const message = chatInput.value.trim();
+      if (name && message) {
+        addMessage(name, message);
+        chatInput.value = '';
+      } else {
+        alert("Por favor, ingresa tu nombre y un mensaje.");
+      }
+    }
+
+    function addMessage(username, message) {
+      const chatMessages = document.getElementById('chatMessages');
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('chat-message');
+      messageElement.innerHTML = `<span class="username">${username}:</span> ${message}`;
+      chatMessages.appendChild(messageElement);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Agregar evento de tecla "Enter" para enviar mensajes
+    document.getElementById('chatInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
   </script>
 
 </body></html>
