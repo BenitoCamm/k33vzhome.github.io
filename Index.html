@@ -1,0 +1,341 @@
+<!DOCTYPE html><html><head><base href="https://media.discordapp.net/attachments/1116092669563777084/1250589631796219914/GP0TDLmX0AAFUme.png?ex=66ce5e5b&amp;is=66cd0cdb&amp;hm=6a1201de1e19aa203c50975621ea70ac831564e74aadd5313548216c98178b7f&amp;=&amp;format=webp&amp;quality=lossless&amp;width=468&amp;height=468">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K33vz_ - Streamer Extraordinario</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #6441a5;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    background-color: #4b367c;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .video-embed {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 2rem 0;
+  }
+  .info-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .info-column {
+    width: 48%;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  .social-links a:hover {
+    color: #b19dd8;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  .logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #4b367c;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .tab-button {
+    background-color: #4b367c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .tab-button:hover {
+    background-color: #3a2b61;
+  }
+  .tab-content {
+    display: none;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  .tab-content.active {
+    display: block;
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .video-item {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .video-item:hover {
+    transform: scale(1.05);
+  }
+  .video-item iframe {
+    width: 100%;
+    height: 200px;
+  }
+  .video-item h3 {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+  }
+  .social-links-bottom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+  }
+  .social-links-bottom a {
+    display: block;
+  }
+  .social-links-bottom img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  .social-links-bottom img:hover {
+    transform: scale(1.1);
+  }
+  .meme-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+</style>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/ee530a47-b190-46b8-8175-82e8380f6b2b-profile_image-70x70.png" alt="Logo de K33vz_" class="logo">
+    <h1>K33vz_</h1>
+  </header>
+  
+  <div class="tab-buttons">
+    <button class="tab-button" onclick="openTab('home')">Inicio</button>
+    <button class="tab-button" onclick="openTab('videos')">Videos</button>
+    <button class="tab-button" onclick="openCommunity()">Comunidad</button>
+  </div>
+
+  <div id="home" class="tab-content active">
+    <div class="content">
+      <h2>¡Bienvenido a NegroLand!</h2>
+      
+      <div class="video-embed">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ifxjmdydTeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      </div>
+      
+      <div class="info-section">
+        <div class="info-column">
+          <h3>Sobre K33vz_</h3>
+          <p>Un Argentino que no sabe hablar ni leer, pero se le quiere mucho</p>
+          
+          <h3>¿Qué puedes esperar en los streams de K33vz_?</h3>
+          <ul>
+            <li>Bolivianos</li>
+            <li>Marrones</li>
+            <li id="retos">Negros</li>
+            <li>Humor rancio del bueno</li>
+          </ul>
+        </div>
+        
+        <div class="info-column">
+          <h3>Horario de streams</h3>
+          <p>K33vz_ hace streams cuando le de la gana, por que es alto violin de boliviano marrones</p>
+          
+          <h3>Comunidad K33vz_</h3>
+          <p>La comunidad de K33vz_ es muy Down, si quieres entrar al server de Discord, has click en el logo de Discord</p>
+          <div class="social-links">
+            <a href="https://twitter.com/k33vz_" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/k33vz_" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.gg/k33vz" target="_blank"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="videos" class="tab-content">
+    <div class="content">
+      <h2>Videos Destacados</h2>
+      <div class="video-grid">
+        <div class="video-item">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/9_ephnwgyfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <h3>Video 1</h3>
+        </div>
+        <div class="video-item">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/XeTOKWItKtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <h3>Video 2</h3>
+        </div>
+        <div class="video-item">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/6S4okfw6wzM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <h3>Video 3</h3>
+        </div>
+      </div>
+      <p>Aca unos videos Gmod para que vean</p>
+      <img src="https://media.discordapp.net/attachments/1116092669563777084/1250589631796219914/GP0TDLmX0AAFUme.png?ex=66ce5e5b&amp;is=66cd0cdb&amp;hm=6a1201de1e19aa203c50975621ea70ac831564e74aadd5313548216c98178b7f&amp;=&amp;format=webp&amp;quality=lossless&amp;width=468&amp;height=468" alt="Meme de K33vz_" class="meme-image">
+    </div>
+  </div>
+
+  <div id="retosModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Retos y Eventos Especiales</h2>
+      <p>K33vz_ organiza regularmente retos y eventos especiales para mantener a la comunidad emocionada y comprometida. Aquí tienes algunos ejemplos:</p>
+      <ul>
+        <li><strong>Maratones de juego:</strong> K33vz_ realiza streams de larga duración jugando a un juego específico o completando una serie de retos.</li>
+        <li><strong>Torneos comunitarios:</strong> Competiciones amistosas entre los miembros de la comunidad en juegos populares.</li>
+        <li><strong>Retos de speedrun:</strong> K33vz_ intenta completar juegos lo más rápido posible, a menudo compitiendo contra sus propios récords.</li>
+        <li><strong>Streams temáticos:</strong> Días especiales donde el stream gira en torno a un tema, juego o género específico.</li>
+        <li><strong>Charity streams:</strong> Eventos benéficos donde se recaudan fondos para diferentes causas mientras se juega.</li>
+      </ul>
+      <p>¡No te pierdas estos emocionantes eventos! Asegúrate de seguir a K33vz_ en todas sus redes sociales para estar al tanto de los próximos retos y eventos especiales.</p>
+    </div>
+  </div>
+
+  <div class="social-links-bottom">
+    <a href="https://discord.gg/qd2UXz4zX4" target="_blank">
+      <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg" alt="Discord Logo" width="60" height="60">
+    </a>
+    <a href="https://www.youtube.com/channel/UCJ4ZAmJJlM8lF1WYYdeO5_g" target="_blank">
+      <img src="https://www.youtube.com/s/desktop/3737dbf3/img/favicon_144x144.png" alt="YouTube Logo" width="60" height="60">
+    </a>
+    <a href="https://www.tiktok.com/@k33vzx" target="_blank">
+      <img src="https://sf16-scmcdn-va.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/logo-blue-1897aafd10d502546bb92b5a04a4d5a2.svg" alt="TikTok Logo" width="60" height="60">
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.style.backgroundColor = '#3a2b61';
+        } else {
+          header.style.backgroundColor = '#4b367c';
+        }
+      });
+
+      // Modal functionality
+      const modal = document.getElementById("retosModal");
+      const btn = document.getElementById("retos");
+      const span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    });
+
+    function openTab(tabName) {
+      const tabContents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+      }
+      document.getElementById(tabName).classList.add("active");
+    }
+
+    function openCommunity() {
+      window.open("https://www.youtube.com/@k33vz_/community", "_blank");
+    }
+  </script>
+
+</body></html>
